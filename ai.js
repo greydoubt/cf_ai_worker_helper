@@ -24,3 +24,15 @@ function ensureShape(shape, value) {
     );
   }
 }
+
+// check array lengths
+function arrLength(obj) {
+  return obj instanceof TypedArrayProto
+    ? obj.length
+    : obj
+        .flat(Infinity)
+        .reduce(
+          (acc, cur) => acc + (cur instanceof TypedArrayProto ? cur.length : 1),
+          0
+        );
+}
