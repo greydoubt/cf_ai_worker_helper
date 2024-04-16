@@ -119,8 +119,6 @@ function serializeType(type, value) {
 }
 
 
-
-
 function deserializeType(type, value) {
   if (isArray(value)) {
     return value.map(v => deserializeType(type, v));
