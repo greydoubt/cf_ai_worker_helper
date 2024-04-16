@@ -117,3 +117,4 @@ function serializeType(type, value) {
   }
   throw new Error(`unexpected type "${type}" with value "${value}".`);
 }
+//
